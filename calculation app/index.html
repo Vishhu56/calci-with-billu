@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Study with Billu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<!-- LOGIN -->
+<div class="card" id="login">
+  <h1>⚡ Study with Billu</h1>
+  <input type="text" id="username" placeholder="Enter your name">
+  <button onclick="login()">Start</button>
+</div>
+
+<!-- HOME -->
+<div class="card hidden" id="home">
+  <h2 id="welcome"></h2>
+
+  <h3>🎯 Select Level</h3>
+  <div class="btn-group" id="levels">
+    <button onclick="selectLevel('easy')">Easy</button>
+    <button onclick="selectLevel('moderate')">Moderate</button>
+    <button onclick="selectLevel('hard')">Hard</button>
+  </div>
+
+  <h3>🧮 Select Section</h3>
+  <div class="btn-group">
+    <button onclick="selectType('add')">+</button>
+    <button onclick="selectType('sub')">-</button>
+    <button onclick="selectType('mul')">×</button>
+    <button onclick="selectType('div')">÷</button>
+    <button onclick="selectType('mix')">Mix</button>
+  </div>
+
+  <h3>⏱ Timer</h3>
+  <div class="btn-group">
+    <button onclick="setTime(10)">10s</button>
+    <button onclick="setTime(20)">20s</button>
+    <button onclick="setTime(30)">30s</button>
+    <button onclick="setTime(40)">40s</button>
+    <button onclick="setTime(50)">50s</button>
+    <button onclick="setTime(60)">60s</button>
+  </div>
+
+  <button class="start-btn" onclick="startGame()">🚀 Start</button>
+</div>
+
+<!-- QUIZ -->
+<div class="card hidden" id="quiz">
+  <div class="top">
+    <button class="back-btn" onclick="goHome()">⬅ Back</button>
+    <span id="timer"></span>
+  </div>
+
+  <h2 id="question"></h2>
+  <input type="number" id="answer" placeholder="Type & Enter">
+  <p id="score"></p>
+</div>
+
+<!-- RESULT -->
+<div class="card hidden" id="result">
+  <h2>🏁 Result</h2>
+  <p id="finalScore"></p>
+
+  <button onclick="goHome()">⬅ Back</button>
+  <button onclick="location.reload()">Play Again</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
